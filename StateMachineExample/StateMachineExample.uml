@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_StU_kGkkEeqIVrUtqrwhtw" name="StateMachineExample" URI="">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_SvdtkGkkEeqIVrUtqrwhtw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_tTFWMGkkEeqIVrUtqrwhtw" name="TurntableStateMachine">
+    <region xmi:type="uml:Region" xmi:id="_vATtAGkkEeqIVrUtqrwhtw" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_kEN9cGklEeqIVrUtqrwhtw" source="_7VKw4GkkEeqIVrUtqrwhtw" target="_AgUnIGklEeqIVrUtqrwhtw"/>
+      <transition xmi:type="uml:Transition" xmi:id="_QT9pkGkmEeqIVrUtqrwhtw" source="_9F6VwGkkEeqIVrUtqrwhtw" target="_CqKBcGklEeqIVrUtqrwhtw">
+        <trigger xmi:type="uml:Trigger" xmi:id="_1t6ikGkmEeqIVrUtqrwhtw" event="_qbxf8GkmEeqIVrUtqrwhtw"/>
+      </transition>
+      <transition xmi:type="uml:Transition" xmi:id="_M2_-AGknEeqIVrUtqrwhtw" source="_Ea93wGklEeqIVrUtqrwhtw" target="_LKk_AGlUEeqIVrUtqrwhtw">
+        <trigger xmi:type="uml:Trigger" xmi:id="_neMQgGlSEeqIVrUtqrwhtw" event="_fy9DIGlSEeqIVrUtqrwhtw"/>
+      </transition>
+      <transition xmi:type="uml:Transition" xmi:id="_nVCTUGk4EeqIVrUtqrwhtw" source="_AgUnIGklEeqIVrUtqrwhtw" target="_9F6VwGkkEeqIVrUtqrwhtw"/>
+      <transition xmi:type="uml:Transition" xmi:id="_nzmeoGk4EeqIVrUtqrwhtw" source="_CqKBcGklEeqIVrUtqrwhtw" target="_Ea93wGklEeqIVrUtqrwhtw"/>
+      <transition xmi:type="uml:Transition" xmi:id="_VhQe8GlUEeqIVrUtqrwhtw" source="_LKk_AGlUEeqIVrUtqrwhtw" target="_OIEq4GlUEeqIVrUtqrwhtw"/>
+      <transition xmi:type="uml:Transition" xmi:id="_WLEQ8GlUEeqIVrUtqrwhtw" source="_OIEq4GlUEeqIVrUtqrwhtw" target="_P6GpMGlUEeqIVrUtqrwhtw"/>
+      <transition xmi:type="uml:Transition" xmi:id="_Wpf5YGlUEeqIVrUtqrwhtw" source="_P6GpMGlUEeqIVrUtqrwhtw" target="_SEIQwGlUEeqIVrUtqrwhtw"/>
+      <transition xmi:type="uml:Transition" xmi:id="_XJrOQGlUEeqIVrUtqrwhtw" source="_SEIQwGlUEeqIVrUtqrwhtw" target="_CqKBcGklEeqIVrUtqrwhtw">
+        <trigger xmi:type="uml:Trigger" xmi:id="_5lvZ0GlUEeqIVrUtqrwhtw" event="_qbxf8GkmEeqIVrUtqrwhtw"/>
+      </transition>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_7VKw4GkkEeqIVrUtqrwhtw" name="Initial1"/>
+      <subvertex xmi:type="uml:State" xmi:id="_9F6VwGkkEeqIVrUtqrwhtw" name="Stopped"/>
+      <subvertex xmi:type="uml:State" xmi:id="_AgUnIGklEeqIVrUtqrwhtw" name="Stopping">
+        <doActivity xmi:type="uml:FunctionBehavior" xmi:id="_wugg8Gk0EeqIVrUtqrwhtw" name="doStopping" isReentrant="false">
+          <language>bean</language>
+          <body>doStoppingBean</body>
+        </doActivity>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_CqKBcGklEeqIVrUtqrwhtw" name="Resetting">
+        <doActivity xmi:type="uml:FunctionBehavior" xmi:id="_gV63AGk2EeqIVrUtqrwhtw" name="doResetting" isReentrant="false">
+          <language>bean</language>
+          <body>doResettingBean</body>
+        </doActivity>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_Ea93wGklEeqIVrUtqrwhtw" name="Idle"/>
+      <subvertex xmi:type="uml:State" xmi:id="_LKk_AGlUEeqIVrUtqrwhtw" name="Starting"/>
+      <subvertex xmi:type="uml:State" xmi:id="_OIEq4GlUEeqIVrUtqrwhtw" name="Execute">
+        <doActivity xmi:type="uml:FunctionBehavior" xmi:id="_DvvIoGlVEeqIVrUtqrwhtw" name="doTurning" isReentrant="false">
+          <language>bean</language>
+          <body>doTurningBean</body>
+        </doActivity>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_P6GpMGlUEeqIVrUtqrwhtw" name="Completing"/>
+      <subvertex xmi:type="uml:State" xmi:id="_SEIQwGlUEeqIVrUtqrwhtw" name="Complete"/>
+    </region>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_W8jHIGkmEeqIVrUtqrwhtw" name="ResetSignal"/>
+  <packagedElement xmi:type="uml:SignalEvent" xmi:id="_qbxf8GkmEeqIVrUtqrwhtw" name="ResetEvent" signal="_W8jHIGkmEeqIVrUtqrwhtw"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_OVXZcGknEeqIVrUtqrwhtw" name="StopSignal"/>
+  <packagedElement xmi:type="uml:SignalEvent" xmi:id="_H9x9wGlSEeqIVrUtqrwhtw" name="StopEvent" signal="_OVXZcGknEeqIVrUtqrwhtw"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_U8blgGlSEeqIVrUtqrwhtw" name="TurnToSignal">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_eMHBIGlSEeqIVrUtqrwhtw" name="orientation">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_-S9BwGlSEeqIVrUtqrwhtw" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:SignalEvent" xmi:id="_fy9DIGlSEeqIVrUtqrwhtw" name="TurnToEvent" signal="_U8blgGlSEeqIVrUtqrwhtw"/>
+</uml:Model>
