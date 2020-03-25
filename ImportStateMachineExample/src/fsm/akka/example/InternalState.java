@@ -17,7 +17,7 @@ public class InternalState {
 	
 		
 	@Bean
-	public Action<String, String> doStoppingBean() {
+	public static Action<String, String> doStoppingBean() {
 		return new Action<String, String>() {
 
 			@Override
@@ -43,13 +43,14 @@ public class InternalState {
 
 			@Override
 			public void execute(StateContext<String, String> context) {
-				System.out.println("doResetting triggered");
+				
+				System.out.println("doResetting triggered in StateMachine: "+context.getStateMachine().getUuid());
 			}
 		};
 	}
 	
 	@Bean
-	public Action<String, String> doTurningBean() {
+	public static Action<String, String> doTurningBean() {
 		return new Action<String, String>() {
 
 			@Override
