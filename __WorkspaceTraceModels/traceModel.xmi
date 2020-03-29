@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tracemodel:GenericTraceModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tracemodel="org.eclipse.capra.generic.tracemodel">
+  <traces name=" TurntableStateMachine : StateMachine _fHB7nG7UEeqryOmHEA-YqQ : SpecHierarchy">
+    <item href="../StateMachineExample/StateMachineExample.uml#_tTFWMGkkEeqIVrUtqrwhtw"/>
+    <item href="../StateMachineExample/My.reqif#_fHB7nG7UEeqryOmHEA-YqQ"/>
+  </traces>
+  <traces name=" Stopping : State TurntableStatemachineConfig.java modelFactory">
+    <item href="../StateMachineExample/StateMachineExample.uml#_AgUnIGklEeqIVrUtqrwhtw"/>
+    <item href="artifactWrappers.xmi#//@artifacts.0"/>
+    <item href="artifactWrappers.xmi#//@artifacts.1"/>
+  </traces>
+  <traces name=" fsm.akka.example 1 : Make instructions available how to integrate github issues in Eclipse">
+    <item href="artifactWrappers.xmi#//@artifacts.2"/>
+    <item href="artifactWrappers.xmi#//@artifacts.3"/>
+  </traces>
+</tracemodel:GenericTraceModel>
