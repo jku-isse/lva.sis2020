@@ -1,0 +1,56 @@
+//Gradle file library ev3dev-lang-java // Template project
+
+//Various plugins - leave them as is and you should be fine
+plugins {
+    id 'java'
+    id 'eclipse'
+    id 'idea'
+    id "net.ossindex.audit" version "0.4.5-beta"
+    id "com.github.johnrengelman.shadow" version "4.0.3"
+    id 'com.github.ev3dev-lang-java.gradle-plugin' version '2.0.0'
+}
+
+//Version of this project
+version = '1.0-SNAPSHOT'
+
+// Project definitions
+
+//Where to search for libraries
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+//Dependencies for this project. We can define when to include our dependencies (compile, test, etc...)
+dependencies {
+    //This is a possible syntax to import libraries
+    compile group: 'com.typesafe.akka', name: 'akka-actor_2.13', version: '2.6.4'
+    compile group: 'org.scala-lang', name: 'scala-library', version: '2.10.4'
+    //This is a more compact style
+    compile("com.github.oxo42:stateless4j:2.5.0")
+    implementation("com.github.ev3dev-lang-java:ev3dev-lang-java:2.5.3")
+    //Even more compact
+    testCompile "com.typesafe.akka:akka-testkit_2.13:2.6.4"
+}
+
+//Where to fetch the
+apply from: './config.gradle'
+
+//Set encoding for compiler
+compileJava.options.encoding = 'UTF-8'
+
+//Compile
+compileJava {
+    sourceCompatibility = 11    //For lower java versions you need to use 1.8 (Java 8) for example
+    targetCompatibility = 11
+}
+
+//Jar
+jar {
+    manifest {
+        attributes("Implementation-Title": project.name,
+                   "Implementation-Version": version,
+                   "Main-Class": brick.pref.mainClass,
+                   "Class-Path": brick.getClassPath(true) )
+    }
+}

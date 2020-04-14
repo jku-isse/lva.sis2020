@@ -1,0 +1,10 @@
+// Project configuration
+brick.pref {
+    // Main class //
+    mainClass = "ConveyorApplication"   //if in another package, use package.MainClass
+
+    // Brick connection parameters //
+    sshHost = "10.0.0.89"   //use your own ip address
+    sshUser = "robot"
+    sshPassword = "maker"
+}
