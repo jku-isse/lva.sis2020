@@ -71,6 +71,8 @@ public class TurntableActor extends AbstractActor {
 	public static class TurnRequest extends BaseTurntableMessage {
 		private Integer position;
 		
+		public static final String ORIENTATION_PARAMETER = "orientation";
+		
 		public TurnRequest(int position) {
 			super(Signals.TurnToSignal);
 			this.position = position;
@@ -80,7 +82,7 @@ public class TurntableActor extends AbstractActor {
 		protected Message<String> convertToInternalMessage() {
 			return MessageBuilder
 			.withPayload(type.toString())
-			.setHeader("orientation", position)
+			.setHeader(ORIENTATION_PARAMETER, position)
 			.build();
 		}
 

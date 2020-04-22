@@ -12,6 +12,7 @@ import akka.actor.ActorSystem;
 public class AppConfiguration {
 
 	@Bean
+	@Scope("singleton")
 	public ActorSystem actorSystem() {
 		ActorSystem system = ActorSystem.create("akka-spring-demo");
 		return system;

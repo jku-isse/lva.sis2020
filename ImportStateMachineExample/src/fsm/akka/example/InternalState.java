@@ -55,6 +55,7 @@ public class InternalState {
 
 			@Override
 			public void execute(StateContext<String, String> context) {
+				//context.getStateMachine()
 				Message<String> msg = context.getMessage();
 				if (msg != null) {
 					System.out.println("TurningHeaders: "+msg.getHeaders().toString());
