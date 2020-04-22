@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ZBrFsISzEeqxmPmc8g4yVg" name="HierarchicalStateMachine">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_ZCXpQISzEeqxmPmc8g4yVg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_ZBvXIISzEeqxmPmc8g4yVg" name="StateMachine1">
+    <region xmi:type="uml:Region" xmi:id="_ZBwlQISzEeqxmPmc8g4yVg" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="__NFKoITQEeqm1scxFNKakw" source="_zbw4sITQEeqm1scxFNKakw" target="_0boaQITQEeqm1scxFNKakw"/>
+      <transition xmi:type="uml:Transition" xmi:id="__1UPUITQEeqm1scxFNKakw" source="_0boaQITQEeqm1scxFNKakw" target="_2G6QUITQEeqm1scxFNKakw">
+        <trigger xmi:type="uml:Trigger" xmi:id="_zQbOkITUEeq7CuXbnf28lw" event="_utrcIITUEeq7CuXbnf28lw"/>
+      </transition>
+      <transition xmi:type="uml:Transition" xmi:id="_Afra8ITREeqm1scxFNKakw" source="_2G6QUITQEeqm1scxFNKakw" target="_5tBbYITQEeqm1scxFNKakw">
+        <trigger xmi:type="uml:Trigger" xmi:id="_NxH0IITXEeq7CuXbnf28lw" event="_K1phgITXEeq7CuXbnf28lw"/>
+      </transition>
+      <transition xmi:type="uml:Transition" xmi:id="_BACWAITREeqm1scxFNKakw" source="_5tBbYITQEeqm1scxFNKakw" target="_9WmxMITQEeqm1scxFNKakw"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_zbw4sITQEeqm1scxFNKakw" name="Initial1"/>
+      <subvertex xmi:type="uml:State" xmi:id="_0boaQITQEeqm1scxFNKakw" name="Starting"/>
+      <subvertex xmi:type="uml:State" xmi:id="_2G6QUITQEeqm1scxFNKakw" name="HierarchicalHere" submachine="_EZ3_oITREeqm1scxFNKakw"/>
+      <subvertex xmi:type="uml:State" xmi:id="_5tBbYITQEeqm1scxFNKakw" name="AlmostDone"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_9WmxMITQEeqm1scxFNKakw" name="FinalState5"/>
+    </region>
+  </packagedElement>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_EZ3_oITREeqm1scxFNKakw" name="StateMachine3" submachineState="_2G6QUITQEeqm1scxFNKakw">
+    <region xmi:type="uml:Region" xmi:id="_E4jfsITREeqm1scxFNKakw" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_bCfD4ITUEeq7CuXbnf28lw" source="_Gf_-oITREeqm1scxFNKakw" target="_XEHw4ITUEeq7CuXbnf28lw"/>
+      <transition xmi:type="uml:Transition" xmi:id="_bjSq4ITUEeq7CuXbnf28lw" source="_XEHw4ITUEeq7CuXbnf28lw" target="_HqbxcITREeqm1scxFNKakw">
+        <trigger xmi:type="uml:Trigger" xmi:id="_pnY3wITUEeq7CuXbnf28lw" event="_jMIEgITUEeq7CuXbnf28lw"/>
+      </transition>
+      <transition xmi:type="uml:Transition" xmi:id="_eGAX4ITXEeq7CuXbnf28lw" source="_HqbxcITREeqm1scxFNKakw" target="_dEYi0ITXEeq7CuXbnf28lw"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_Gf_-oITREeqm1scxFNKakw" name="SubInit1"/>
+      <subvertex xmi:type="uml:State" xmi:id="_HqbxcITREeqm1scxFNKakw" name="DoSub">
+        <doActivity xmi:type="uml:FunctionBehavior" xmi:id="_feHpEITREeqm1scxFNKakw" name="doSubSM" isReentrant="true">
+          <language>bean</language>
+          <body>doSubBean</body>
+        </doActivity>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_XEHw4ITUEeq7CuXbnf28lw" name="WaitForInput"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_dEYi0ITXEeq7CuXbnf28lw" name="FinalState6"/>
+    </region>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_eZ6SsITUEeq7CuXbnf28lw" name="InputToSub"/>
+  <packagedElement xmi:type="uml:SignalEvent" xmi:id="_jMIEgITUEeq7CuXbnf28lw" name="SignalInputToSub" signal="_eZ6SsITUEeq7CuXbnf28lw"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_sICPkITUEeq7CuXbnf28lw" name="InputBeforeSub"/>
+  <packagedElement xmi:type="uml:SignalEvent" xmi:id="_utrcIITUEeq7CuXbnf28lw" name="SignalBeforeSub" signal="_sICPkITUEeq7CuXbnf28lw"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_IWZQ0ITXEeq7CuXbnf28lw" name="SubDone"/>
+  <packagedElement xmi:type="uml:SignalEvent" xmi:id="_K1phgITXEeq7CuXbnf28lw" name="SignalSubDone" signal="_IWZQ0ITXEeq7CuXbnf28lw"/>
+</uml:Model>
