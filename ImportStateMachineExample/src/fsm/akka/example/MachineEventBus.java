@@ -26,7 +26,7 @@ public class MachineEventBus extends ScanningEventBus<TurntableActor.TurntableSt
 	}
 
 	@Override
-	public void publish(TurntableStateChangeEvent event, ActorRef subscriber) {
+	public void publish(TurntableStateChangeEvent event, ActorRef subscriber) {		
 		subscriber.tell(event, ActorRef.noSender());
 	}
 

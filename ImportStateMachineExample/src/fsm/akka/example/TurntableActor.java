@@ -105,6 +105,12 @@ public class TurntableActor extends AbstractActor {
 			this.turntableId = turntableId;
 			this.state = state;
 		}
+		@Override
+		public String toString() {
+			return "TurntableStateChangeEvent [turntableId=" + turntableId + ", state=" + state + "]";
+		}
+		
+		
 	}
 	
 
